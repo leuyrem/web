@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadein Slider</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none; color: #333;}
+
+        #slidewrap {width: 1000px; height: 350px; margin: 0 auto; overflow: hidden;}
+        .slide {width: 400%; height: 100%; display: flex;}
+        .slide>li {width: 1000px; height: 100%;}
+        .slide>li>img {width: 100%; height: 100%;}
+
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(function(){
+            function slide(){
+                $('.slide').animate({'margin-left': -1000},1000, function(){
+                    $('.slide li:first').appendTo('.slide');
+                    $('.slide').css('margin-left',0);
+                    // $('.slide').css({marginLeft: 0});
+                })
+
+
+            }
+
+
+            setInterval(slide,3000);
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    
+    <div id="slidewrap">
+        <ul class="slide">
+            <li><img src="https://plus.unsplash.com/premium_photo-1663951812969-5cdb7ebb04c1?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide img"></li>
+            <li><img src="https://images.unsplash.com/photo-1569254994521-ddbb54af5ae8?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide img"></li>
+            <li><img src="https://images.unsplash.com/photo-1544083098-76551842b5fc?q=80&w=1276&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="slide img"></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

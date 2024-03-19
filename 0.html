@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        #boxWrap {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <button id="a">click</button>
+
+    <div id="boxWrap">
+        <div id="box">
+            <h3>popup</h3>
+            <button id="cbtn">close</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        $(function(){
+            $('#a').click(function(){
+                $('#boxWrap').fadeIn();
+            });
+
+            $('#cbtn').click(function(){
+                $('#boxWrap').fadeOut();
+            });
+        });
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

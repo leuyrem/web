@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #666;
+            font-size: 12px;
+            font-family: '맑은고딕';
+        }
+
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+
+
+        #notice {
+            width: 300px;
+            height: 190px;
+            margin: 20px;
+        }
+
+        #notice ul {
+            height: 32px;
+            background-color: #eee;
+            width: 240px;
+        }
+
+        #notice li {
+            float: left;
+            width: 80px;
+            height: 25px;
+            text-align: center;
+            cursor: pointer;
+            padding-top: 7px;
+        }
+
+        #notice .tab_list {
+            float: left;
+            width: 280px;
+            height: 150px;
+            border-top: 2px solid #efb300;
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .active {
+            background-color: #efb300;
+            color: #fff;
+        }
+        .tab_sub:not(:first-of-type){display: none;}
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+            $(document).ready(function () {
+                $('.tab_menu').click(function () {
+                    let index = $(this).index();
+
+                    $('.tab_sub').eq(index).show().siblings().hide();
+                    $(this).addClass('active').siblings().removeClass('active');
+                });
+            });
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id="notice">
+        <ul>
+            <li class="tab_menu active">공지사항1</li>
+            <li class="tab_menu">공지사항2</li>
+            <li class="tab_menu">공지사항3</li>
+        </ul>
+
+        <div class="tab_list">
+            <div class="tab_sub">서브1번</div>
+            <div class="tab_sub">서브2번</div>
+            <div class="tab_sub">서브3번</div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

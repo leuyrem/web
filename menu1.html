@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu1</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none; color: #333;}
+
+        .menu {width: 200px;}
+        .menu>li {text-align: center; background-color: black; line-height: 40px; position: relative;}
+        .menu>li:hover {background-color: #fff;}
+        .menu>li:hover a {color: #333;}
+        .menu>li>a {color: #fff;}
+
+        .sub {width: 100%; background-color: #ddd; display: none; position: absolute; top: 0; left: 200px;} 
+        .sub li:hover{background-color: gold;}
+
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#">Menu1</a>
+            <ul class="sub">
+                <li><a href="#">SUB1</a></li>
+                <li><a href="#">SUB2</a></li>
+                <li><a href="#">SUB3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Menu2</a>
+            <ul class="sub">
+                <li><a href="#">SUB1</a></li>
+                <li><a href="#">SUB2</a></li>
+                <li><a href="#">SUB3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Menu3</a>
+            <ul class="sub">
+                <li><a href="#">SUB1</a></li>
+                <li><a href="#">SUB2</a></li>
+                <li><a href="#">SUB3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
